@@ -31,6 +31,8 @@ Tema com alto contraste, criado com uma paleta de cores baseada em tons terrosos
 
 ## 🖼️ Preview
 
+![Preview](screenshots/preview.png)
+
 O tema oferece:
 
 - ✅ Excelente contraste para longas sessões de código
