@@ -146,6 +146,8 @@
     "progressBar.background": "#AD924B",
     "widget.shadow": "#00000080",
     "widget.border": "#242526",
+    "editorGroupHeader.tabsBackground": "#0A0B0C",
+    "editorGroupHeader.tabsBorder": "#242526",
     "editorWidget.background": "#141516",
     "editorWidget.foreground": "#E8E6E3",
     "editorWidget.border": "#242526",
@@ -861,6 +863,414 @@
       "settings": {
         "foreground": "#C678DD",
         "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Java Import",
+      "scope": [
+        "meta.import.java",
+        "storage.modifier.import.java",
+        "entity.name.import.java"
+      ],
+      "settings": {
+        "foreground": "#61AFEF",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Java Package",
+      "scope": [
+        "storage.modifier.package.java",
+        "entity.name.package.java"
+      ],
+      "settings": {
+        "foreground": "#61AFEF",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Java Class Declaration",
+      "scope": [
+        "entity.name.class.java",
+        "entity.name.interface.java",
+        "entity.name.enum.java"
+      ],
+      "settings": {
+        "foreground": "#C9A858",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Java Annotations",
+      "scope": [
+        "meta.annotation.java",
+        "storage.type.annotation.java",
+        "punctuation.definition.annotation.java"
+      ],
+      "settings": {
+        "foreground": "#E5C07B"
+      }
+    },
+    {
+      "name": "Java Primitive Types",
+      "scope": [
+        "storage.type.primitive.java"
+      ],
+      "settings": {
+        "foreground": "#D19A66"
+      }
+    },
+    {
+      "name": "Java Modifiers",
+      "scope": [
+        "storage.modifier.java"
+      ],
+      "settings": {
+        "foreground": "#C678DD"
+      }
+    },
+    {
+      "name": "Java Generics",
+      "scope": [
+        "storage.type.generic.java",
+        "punctuation.definition.generic.java"
+      ],
+      "settings": {
+        "foreground": "#B8A074"
+      }
+    },
+    {
+      "name": "Java Method Declaration",
+      "scope": [
+        "entity.name.function.java"
+      ],
+      "settings": {
+        "foreground": "#AD924B"
+      }
+    },
+    {
+      "name": "Java Static Members",
+      "scope": [
+        "variable.other.class.java",
+        "meta.method-call.java variable.other.class.java"
+      ],
+      "settings": {
+        "foreground": "#E06C75"
+      }
+    },
+    {
+      "name": "Java Constants",
+      "scope": [
+        "variable.other.constant.java",
+        "variable.other.enum.java"
+      ],
+      "settings": {
+        "foreground": "#E5C07B",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Go Package Declaration",
+      "scope": [
+        "meta.package.go",
+        "keyword.control.package.go"
+      ],
+      "settings": {
+        "foreground": "#61AFEF",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Go Import",
+      "scope": [
+        "meta.import.go",
+        "keyword.control.import.go"
+      ],
+      "settings": {
+        "foreground": "#61AFEF",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Go Function Declaration",
+      "scope": [
+        "entity.name.function.go"
+      ],
+      "settings": {
+        "foreground": "#AD924B"
+      }
+    },
+    {
+      "name": "Go Struct Declaration",
+      "scope": [
+        "entity.name.type.go"
+      ],
+      "settings": {
+        "foreground": "#C9A858",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Go Interface Declaration",
+      "scope": [
+        "entity.name.type.interface.go"
+      ],
+      "settings": {
+        "foreground": "#C9A858",
+        "fontStyle": "italic bold"
+      }
+    },
+    {
+      "name": "Go Keywords",
+      "scope": [
+        "keyword.go"
+      ],
+      "settings": {
+        "foreground": "#C678DD"
+      }
+    },
+    {
+      "name": "Go Built-in Functions",
+      "scope": [
+        "support.function.builtin.go"
+      ],
+      "settings": {
+        "foreground": "#56B6C2"
+      }
+    },
+    {
+      "name": "Go Goroutines and Channels",
+      "scope": [
+        "keyword.control.go.go",
+        "keyword.control.channel.go"
+      ],
+      "settings": {
+        "foreground": "#E5C07B",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Go Struct Fields",
+      "scope": [
+        "variable.other.field.go",
+        "entity.name.variable.field.go"
+      ],
+      "settings": {
+        "foreground": "#8B9D6F"
+      }
+    },
+    {
+      "name": "Go Methods",
+      "scope": [
+        "entity.name.function.method.go"
+      ],
+      "settings": {
+        "foreground": "#AD924B",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Go Constants",
+      "scope": [
+        "constant.other.go"
+      ],
+      "settings": {
+        "foreground": "#E5C07B",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Go Pointers",
+      "scope": [
+        "keyword.operator.pointer.go",
+        "keyword.operator.address.go"
+      ],
+      "settings": {
+        "foreground": "#E06C75"
+      }
+    },
+    {
+      "name": "Go Type Parameters",
+      "scope": [
+        "storage.type.parameter.go"
+      ],
+      "settings": {
+        "foreground": "#B8A074"
+      }
+    },
+    {
+      "name": "C# Keywords",
+      "scope": [
+        "keyword.cs",
+        "storage.type.cs"
+      ],
+      "settings": {
+        "foreground": "#C678DD"
+      }
+    },
+    {
+      "name": "C# Class and Interface",
+      "scope": [
+        "entity.name.class.cs",
+        "entity.name.interface.cs"
+      ],
+      "settings": {
+        "foreground": "#C9A858",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "C# Attributes",
+      "scope": [
+        "meta.attribute.cs",
+        "punctuation.definition.attribute.cs"
+      ],
+      "settings": {
+        "foreground": "#E5C07B"
+      }
+    },
+    {
+      "name": "Kotlin Keywords",
+      "scope": [
+        "keyword.kotlin",
+        "storage.type.kotlin"
+      ],
+      "settings": {
+        "foreground": "#C678DD"
+      }
+    },
+    {
+      "name": "Kotlin Class and Interface",
+      "scope": [
+        "entity.name.class.kotlin",
+        "entity.name.interface.kotlin",
+        "entity.name.object.kotlin"
+      ],
+      "settings": {
+        "foreground": "#C9A858",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Kotlin Annotations",
+      "scope": [
+        "meta.annotation.kotlin",
+        "punctuation.definition.annotation.kotlin"
+      ],
+      "settings": {
+        "foreground": "#E5C07B"
+      }
+    },
+    {
+      "name": "Swift Keywords",
+      "scope": [
+        "keyword.swift",
+        "storage.type.swift"
+      ],
+      "settings": {
+        "foreground": "#C678DD"
+      }
+    },
+    {
+      "name": "Swift Class and Struct",
+      "scope": [
+        "entity.name.class.swift",
+        "entity.name.struct.swift",
+        "entity.name.enum.swift",
+        "entity.name.protocol.swift"
+      ],
+      "settings": {
+        "foreground": "#C9A858",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Swift Attributes",
+      "scope": [
+        "meta.attribute.swift",
+        "punctuation.definition.attribute.swift"
+      ],
+      "settings": {
+        "foreground": "#E5C07B"
+      }
+    },
+    {
+      "name": "PHP Keywords",
+      "scope": [
+        "keyword.php",
+        "storage.type.php"
+      ],
+      "settings": {
+        "foreground": "#C678DD"
+      }
+    },
+    {
+      "name": "PHP Class and Interface",
+      "scope": [
+        "entity.name.class.php",
+        "entity.name.interface.php",
+        "entity.name.trait.php"
+      ],
+      "settings": {
+        "foreground": "#C9A858",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Ruby Keywords",
+      "scope": [
+        "keyword.ruby",
+        "storage.type.ruby"
+      ],
+      "settings": {
+        "foreground": "#C678DD"
+      }
+    },
+    {
+      "name": "Ruby Class and Module",
+      "scope": [
+        "entity.name.class.ruby",
+        "entity.name.module.ruby"
+      ],
+      "settings": {
+        "foreground": "#C9A858",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "C/C++ Keywords",
+      "scope": [
+        "keyword.c",
+        "keyword.cpp",
+        "storage.type.c",
+        "storage.type.cpp"
+      ],
+      "settings": {
+        "foreground": "#C678DD"
+      }
+    },
+    {
+      "name": "C/C++ Preprocessor",
+      "scope": [
+        "meta.preprocessor.c",
+        "meta.preprocessor.cpp",
+        "keyword.control.directive.c",
+        "keyword.control.directive.cpp"
+      ],
+      "settings": {
+        "foreground": "#E5C07B",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "C/C++ Headers",
+      "scope": [
+        "meta.include.c",
+        "meta.include.cpp"
+      ],
+      "settings": {
+        "foreground": "#61AFEF",
+        "fontStyle": "italic"
       }
     }
   ]
