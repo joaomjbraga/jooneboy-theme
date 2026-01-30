@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jooneboy Dark - Preview de Cores</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0D0E0F;
+            color: #E8E6E3;
+            padding: 40px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #AD924B;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #64712C;
+            font-size: 1.2em;
+            margin-bottom: 50px;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+        }
+        
+        .section h2 {
+            color: #AD924B;
+            font-size: 2em;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #48453D;
+            padding-bottom: 10px;
+        }
+        
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .color-card {
+            background: #141516;
+            border: 1px solid #1A1B1C;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .color-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(173, 146, 75, 0.2);
+        }
+        
+        .color-swatch {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .color-info {
+            padding: 15px;
+        }
+        
+        .color-name {
+            font-weight: bold;
+            color: #E8E6E3;
+            margin-bottom: 5px;
+        }
+        
+        .color-hex {
+            font-family: 'Courier New', monospace;
+            color: #AD924B;
+            font-size: 0.9em;
+        }
+        
+        .color-usage {
+            color: #8B9D6F;
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
+        
+        .code-preview {
+            background: #0D0E0F;
+            border: 1px solid #1A1B1C;
+            border-radius: 8px;
+            padding: 30px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.8;
+            overflow-x: auto;
+        }
+        
+        .keyword { color: #C678DD; font-style: italic; }
+        .function { color: #AD924B; }
+        .string { color: #98C379; }
+        .number { color: #D19A66; }
+        .comment { color: #64712C; font-style: italic; }
+        .type { color: #C9A858; }
+        .operator { color: #56B6C2; }
+        .variable { color: #E8E6E3; }
+        .parameter { color: #9FB8A3; }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .feature-card {
+            background: #141516;
+            border: 1px solid #1A1B1C;
+            border-radius: 8px;
+            padding: 25px;
+        }
+        
+        .feature-card h3 {
+            color: #AD924B;
+            margin-bottom: 10px;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #2A383B;
+        }
+        
+        .feature-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-card li::before {
+            content: "✓ ";
+            color: #64712C;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Jooneboy Dark</h1>
+        <p class="subtitle">Tema moderno com alto contraste e paleta terrosa sofisticada</p>
+        
+        <div class="section">
+            <h2>Cores Principais</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #AD924B; color: #0D0E0F;">#AD924B</div>
+                    <div class="color-info">
+                        <div class="color-name">Dourado Principal</div>
+                        <div class="color-hex">#AD924B</div>
+                        <div class="color-usage">Funções, destaques, elementos ativos</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #64712C;">#64712C</div>
+                    <div class="color-info">
+                        <div class="color-name">Verde Oliva</div>
+                        <div class="color-hex">#64712C</div>
+                        <div class="color-usage">Comentários, strings verdes, git additions</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #43482E;">#43482E</div>
+                    <div class="color-info">
+                        <div class="color-name">Verde Escuro</div>
+                        <div class="color-hex">#43482E</div>
+                        <div class="color-usage">Highlights sutis, backgrounds</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #48453D;">#48453D</div>
+                    <div class="color-info">
+                        <div class="color-name">Cinza Terra</div>
+                        <div class="color-hex">#48453D</div>
+                        <div class="color-usage">Bordas, elementos inativos</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #2A383B;">#2A383B</div>
+                    <div class="color-info">
+                        <div class="color-name">Azul Petróleo</div>
+                        <div class="color-hex">#2A383B</div>
+                        <div class="color-usage">Seleções, backgrounds ativos</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #2D3A33;">#2D3A33</div>
+                    <div class="color-info">
+                        <div class="color-name">Verde Profundo</div>
+                        <div class="color-hex">#2D3A33</div>
+                        <div class="color-usage">Elementos secundários, botões</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Cores de Interface</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #0D0E0F;">#0D0E0F</div>
+                    <div class="color-info">
+                        <div class="color-name">Background Editor</div>
+                        <div class="color-hex">#0D0E0F</div>
+                        <div class="color-usage">Fundo principal do editor</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #0F1011;">#0F1011</div>
+                    <div class="color-info">
+                        <div class="color-name">Sidebar Background</div>
+                        <div class="color-hex">#0F1011</div>
+                        <div class="color-usage">Fundo da barra lateral</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #0A0B0C;">#0A0B0C</div>
+                    <div class="color-info">
+                        <div class="color-name">Activity Bar</div>
+                        <div class="color-hex">#0A0B0C</div>
+                        <div class="color-usage">Barra de atividades</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #141516;">#141516</div>
+                    <div class="color-info">
+                        <div class="color-name">Widget Background</div>
+                        <div class="color-hex">#141516</div>
+                        <div class="color-usage">Popups, widgets, menus</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #E8E6E3; color: #0D0E0F;">#E8E6E3</div>
+                    <div class="color-info">
+                        <div class="color-name">Foreground</div>
+                        <div class="color-hex">#E8E6E3</div>
+                        <div class="color-usage">Texto principal</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #D0CEC9; color: #0D0E0F;">#D0CEC9</div>
+                    <div class="color-info">
+                        <div class="color-name">Secondary Text</div>
+                        <div class="color-hex">#D0CEC9</div>
+                        <div class="color-usage">Texto secundário</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Syntax Highlighting</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #C678DD;">#C678DD</div>
+                    <div class="color-info">
+                        <div class="color-name">Keywords</div>
+                        <div class="color-hex">#C678DD</div>
+                        <div class="color-usage">if, for, const, class</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #98C379;">#98C379</div>
+                    <div class="color-info">
+                        <div class="color-name">Strings</div>
+                        <div class="color-hex">#98C379</div>
+                        <div class="color-usage">Texto entre aspas</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #D19A66;">#D19A66</div>
+                    <div class="color-info">
+                        <div class="color-name">Numbers</div>
+                        <div class="color-hex">#D19A66</div>
+                        <div class="color-usage">Números, atributos</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #56B6C2;">#56B6C2</div>
+                    <div class="color-info">
+                        <div class="color-name">Operators</div>
+                        <div class="color-hex">#56B6C2</div>
+                        <div class="color-usage">+, -, =, =></div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #E06C75;">#E06C75</div>
+                    <div class="color-info">
+                        <div class="color-name">Tags/Errors</div>
+                        <div class="color-hex">#E06C75</div>
+                        <div class="color-usage">HTML tags, erros</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #C9A858;">#C9A858</div>
+                    <div class="color-info">
+                        <div class="color-name">Types/Classes</div>
+                        <div class="color-hex">#C9A858</div>
+                        <div class="color-usage">Classes, tipos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Preview de Código</h2>
+            <div class="code-preview">
+<span class="comment">// Exemplo de código com syntax highlighting</span>
+<span class="keyword">import</span> { <span class="variable">useState</span>, <span class="variable">useEffect</span> } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="keyword">interface</span> <span class="type">User</span> {
+  <span class="parameter">id</span>: <span class="type">number</span>;
+  <span class="parameter">name</span>: <span class="type">string</span>;
+  <span class="parameter">email</span>: <span class="type">string</span>;
+}
+
+<span class="keyword">const</span> <span class="function">fetchUserData</span> <span class="operator">=</span> <span class="keyword">async</span> (<span class="parameter">userId</span>: <span class="type">number</span>): <span class="type">Promise</span>&lt;<span class="type">User</span>&gt; <span class="operator">=></span> {
+  <span class="keyword">const</span> <span class="variable">response</span> <span class="operator">=</span> <span class="keyword">await</span> <span class="function">fetch</span>(<span class="string">`/api/users/<span class="operator">${</span><span class="variable">userId</span><span class="operator">}</span>`</span>);
+  <span class="keyword">return</span> <span class="variable">response</span>.<span class="function">json</span>();
+};
+
+<span class="keyword">export</span> <span class="keyword">const</span> <span class="function">UserProfile</span> <span class="operator">=</span> () <span class="operator">=></span> {
+  <span class="keyword">const</span> [<span class="variable">user</span>, <span class="variable">setUser</span>] <span class="operator">=</span> <span class="function">useState</span>&lt;<span class="type">User</span> | <span class="keyword">null</span>&gt;(<span class="keyword">null</span>);
+  <span class="keyword">const</span> [<span class="variable">loading</span>, <span class="variable">setLoading</span>] <span class="operator">=</span> <span class="function">useState</span>(<span class="keyword">true</span>);
+
+  <span class="function">useEffect</span>(() <span class="operator">=></span> {
+    <span class="keyword">const</span> <span class="function">loadUser</span> <span class="operator">=</span> <span class="keyword">async</span> () <span class="operator">=></span> {
+      <span class="keyword">try</span> {
+        <span class="keyword">const</span> <span class="variable">data</span> <span class="operator">=</span> <span class="keyword">await</span> <span class="function">fetchUserData</span>(<span class="number">1</span>);
+        <span class="function">setUser</span>(<span class="variable">data</span>);
+      } <span class="keyword">catch</span> (<span class="parameter">error</span>) {
+        <span class="variable">console</span>.<span class="function">error</span>(<span class="string">'Failed to load user'</span>, <span class="variable">error</span>);
+      } <span class="keyword">finally</span> {
+        <span class="function">setLoading</span>(<span class="keyword">false</span>);
+      }
+    };
+
+    <span class="function">loadUser</span>();
+  }, []);
+
+  <span class="keyword">if</span> (<span class="variable">loading</span>) <span class="keyword">return</span> <span class="operator">&lt;</span><span class="type">div</span><span class="operator">></span>Loading...<span class="operator">&lt;/</span><span class="type">div</span><span class="operator">></span>;
+
+  <span class="keyword">return</span> (
+    <span class="operator">&lt;</span><span class="type">div</span> <span class="parameter">className</span><span class="operator">=</span><span class="string">"user-profile"</span><span class="operator">></span>
+      <span class="operator">&lt;</span><span class="type">h1</span><span class="operator">></span>{<span class="variable">user</span>?.<span class="variable">name</span>}<span class="operator">&lt;/</span><span class="type">h1</span><span class="operator">></span>
+      <span class="operator">&lt;</span><span class="type">p</span><span class="operator">></span>{<span class="variable">user</span>?.<span class="variable">email</span>}<span class="operator">&lt;/</span><span class="type">p</span><span class="operator">></span>
+    <span class="operator">&lt;/</span><span class="type">div</span><span class="operator">></span>
+  );
+};
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Características do Tema</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>🎨 Design</h3>
+                    <ul>
+                        <li>Preto moderno (#0D0E0F)</li>
+                        <li>Alto contraste para legibilidade</li>
+                        <li>Paleta terrosa sofisticada</li>
+                        <li>Destaques em dourado</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>💡 Interface</h3>
+                    <ul>
+                        <li>Activity bar discreta</li>
+                        <li>Sidebar moderna</li>
+                        <li>Status bar integrada</li>
+                        <li>Tabs com indicadores claros</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🔤 Tipografia</h3>
+                    <ul>
+                        <li>Comentários em itálico</li>
+                        <li>Keywords destacadas</li>
+                        <li>Funções em dourado</li>
+                        <li>Strings em verde claro</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>⚡ Produtividade</h3>
+                    <ul>
+                        <li>Git integration colorida</li>
+                        <li>Bracket pair colors</li>
+                        <li>Terminal harmonioso</li>
+                        <li>Semantic highlighting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
