@@ -1,7 +1,7 @@
 {
   "name": "jooneboy",
   "displayName": "Jooneboy Theme",
-  "description": "Tema dark com alto contraste e paleta terrosa quente (Jooneboy) + variante suave inspirada em Rosé Pine (Jooneboy Moon)",
+  "description": "Tema dark com alto contraste e paleta terrosa quente (Jooneboy)",
   "version": "1.0.3",
   "license": "MIT",
   "publisher": "joaomjbraga",
@@ -26,11 +26,8 @@
     "earthy",
     "gold",
     "olive",
-    "rose-pine",
-    "pastel",
     "vscode-theme",
-    "jooneboy",
-    "moon"
+    "jooneboy"
   ],
   "categories": [
     "Themes"
@@ -40,7 +37,7 @@
   },
   "icon": "icon.png",
   "galleryBanner": {
-    "color": "#191724",
+    "color": "#1F1F1F",
     "theme": "dark"
   },
   "contributes": {
@@ -49,11 +46,6 @@
         "label": "Jooneboy",
         "uiTheme": "vs-dark",
         "path": "./themes/jooneboy-theme.json"
-      },
-      {
-        "label": "Jooneboy Moon",
-        "uiTheme": "vs-dark",
-        "path": "./themes/jooneboy-moon.json"
       }
     ]
   },
