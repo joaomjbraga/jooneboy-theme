@@ -1,48 +1,64 @@
 {
   "name": "jooneboy",
   "displayName": "Jooneboy Theme",
-  "description": "Um tema com alto contraste e paleta terrosa",
+  "description": "Tema dark com alto contraste e paleta terrosa quente (Jooneboy) + variante suave inspirada em Rosé Pine (Jooneboy Moon)",
   "version": "1.0.3",
   "license": "MIT",
   "publisher": "joaomjbraga",
   "author": {
-    "name": "João Braga",
+    "name": "João Marcos de Jesus Braga",
+    "email": "joomdeveloper.app@gmail.com",
     "url": "https://github.com/joaomjbraga"
   },
+  "homepage": "https://github.com/joaomjbraga/jooneboy-theme#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/joaomjbraga/jooneboy-theme"
+    "url": "https://github.com/joaomjbraga/jooneboy-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joaomjbraga/jooneboy-theme/issues"
   },
   "keywords": [
     "theme",
-    "dark",
-    "dark theme",
+    "dark-theme",
     "color-theme",
-    "high contrast",
-    "modern",
-    "jooneboy",
+    "high-contrast",
     "earthy",
     "gold",
-    "olive"
+    "olive",
+    "rose-pine",
+    "pastel",
+    "vscode-theme",
+    "jooneboy",
+    "moon"
+  ],
+  "categories": [
+    "Themes"
   ],
   "engines": {
     "vscode": "^1.60.0"
   },
-  "categories": [
-    "Themes"
-  ],
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#191724",
+    "theme": "dark"
+  },
   "contributes": {
     "themes": [
       {
         "label": "Jooneboy",
         "uiTheme": "vs-dark",
         "path": "./themes/jooneboy-theme.json"
+      },
+      {
+        "label": "Jooneboy Moon",
+        "uiTheme": "vs-dark",
+        "path": "./themes/jooneboy-moon.json"
       }
     ]
   },
-  "icon": "icon.png",
-  "galleryBanner": {
-    "color": "#0D0E0F",
-    "theme": "dark"
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
   }
 }
