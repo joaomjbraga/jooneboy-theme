@@ -38,7 +38,6 @@ Tema com alto contraste, criado com uma paleta de cores baseada em tons terrosos
 - **Warnings**: `#E5C07B` (amarelo)
 - **Info**: `#61AFEF` (azul)
 
-
 ### Melhorias de Contraste
 
 🎯 **Números de Linha**: `#7A745C` → `#8A8470` (22% mais contraste)
@@ -64,30 +63,35 @@ Tema com alto contraste, criado com uma paleta de cores baseada em tons terrosos
 ### Suporte Específico por Linguagem
 
 #### 🐍 Python
+
 - F-strings com destaque especial
 - Type hints diferenciados
 - Decorators em itálico dourado
 - Parâmetro `self` destacado
 
 #### ⚛️ TypeScript/JavaScript
+
 - Decorators suportados
 - Utility types (`Partial`, `Pick`, etc.)
 - Template literals
 - JSX: Props vs atributos diferenciados
 
 #### 🦀 Rust
+
 - Traits em itálico
 - Lifetimes destacados
 - Macros com cor específica
 - Mutable references em vermelho
 
 #### 🔷 Go
+
 - Goroutines e channels destacados
 - Error type específico
 - Struct fields diferenciados
 - Métodos vs funções
 
 #### ☕ Java
+
 - Annotations douradas
 - Generics com tipo específico
 - Static members destacados
@@ -96,6 +100,7 @@ Tema com alto contraste, criado com uma paleta de cores baseada em tons terrosos
 ### Integração com Extensões
 
 #### GitLens
+
 ```json
 "gitlens.gutterBackgroundColor": "#0f101400",
 "gitlens.gutterForegroundColor": "#8A8470",
@@ -104,6 +109,7 @@ Tema com alto contraste, criado com uma paleta de cores baseada em tons terrosos
 ```
 
 #### Error Lens
+
 ```json
 "errorLens.errorBackground": "#E06C7520",
 "errorLens.warningBackground": "#E5C07B20",
@@ -112,6 +118,7 @@ Tema com alto contraste, criado com uma paleta de cores baseada em tons terrosos
 ```
 
 #### Todo Tree
+
 ```json
 "todo-tree.highlights.TODOHighlight.foreground": "#E5C07B",
 "todo-tree.highlights.FIXMEHighlight.foreground": "#E06C75",
@@ -119,9 +126,213 @@ Tema com alto contraste, criado com uma paleta de cores baseada em tons terrosos
 "todo-tree.highlights.HACKHighlight.foreground": "#C678DD"
 ```
 
-## ⚙️ Configuração Recomendada
+## ⚙️ Configuração Completa Recomendada
 
-Para aproveitar ao máximo o tema Jooneboy:
+Para aproveitar ao máximo o tema Jooneboy com uma experiência minimalista e otimizada, adicione estas configurações ao seu `settings.json`:
+
+<details>
+<summary>📋 Clique para ver a configuração completa</summary>
+
+```jsonc
+{
+  // ============================================
+  // 🎨 TEMA E APARÊNCIA
+  // ============================================
+  "workbench.colorTheme": "Jooneboy",
+  "workbench.iconTheme": "symbols",
+  "workbench.productIconTheme": "fluent-icons",
+
+  // ============================================
+  // 🪟 INTERFACE MINIMALISTA
+  // ============================================
+  "window.menuBarVisibility": "hidden",
+  "window.commandCenter": false,
+  "chat.commandCenter.enabled": false,
+
+  "workbench.editor.editorActionsLocation": "titleBar",
+  "workbench.activityBar.location": "top",
+  "workbench.statusBar.visible": false,
+  "workbench.editor.labelFormat": "short",
+  "workbench.startupEditor": "none",
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.tips.enabled": false,
+  "workbench.enableExperiments": false,
+
+  // ============================================
+  // 📝 EDITOR - VISUAL
+  // ============================================
+  "breadcrumbs.enabled": false,
+  "editor.minimap.enabled": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.stickyScroll.enabled": false,
+
+  // Fonte e tipografia
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.6,
+
+  // Comportamento do cursor
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  // Brackets e guias
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+
+  // Sugestões e hints
+  "editor.inlayHints.enabled": "on",
+
+  // Scroll suave
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+
+  // ============================================
+  // 📝 EDITOR - COMPORTAMENTO
+  // ============================================
+  "editor.tabSize": 2,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 100,
+
+  // Gerenciamento de abas
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 10,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.enablePreview": false,
+
+  // ============================================
+  // 💾 ARQUIVOS
+  // ============================================
+  "files.hotExit": "onExitAndWindowClose",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // Associações de arquivos
+  "files.associations": {
+    "*.css": "css",
+    ".env*": "dotenv",
+  },
+
+  // ============================================
+  // 📁 EXPLORER
+  // ============================================
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+
+  // ============================================
+  // 🖥️ TERMINAL
+  // ============================================
+  "terminal.integrated.showExitAlert": false,
+  "terminal.integrated.rightClickBehavior": "nothing",
+  "terminal.integrated.copyOnSelection": false,
+  "terminal.integrated.cursorBlinking": false,
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.stickyScroll.enabled": false,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.smoothScrolling": true,
+
+  // Fonte do terminal
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontLigatures.enabled": true,
+
+  // ============================================
+  // ✨ FORMATAÇÃO E LINTING
+  // ============================================
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit",
+  },
+
+  // Formatadores padrão por linguagem
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features",
+  },
+
+  // ============================================
+  // 🎯 SYMBOLS (Icon Theme)
+  // ============================================
+  "symbols.files.associations": {
+    "*.module.ts": "nest",
+    "*.service.ts": "nest-service",
+    "*.pipe.ts": "nest-middleware",
+    "*.guard.ts": "nest-guard",
+    "*.decorator.ts": "nest-decorator",
+    "*.mock.ts": "ts-test",
+    "*.e2e-spec.ts": "ts-test",
+    "*.e2e-test.ts": "ts-test",
+    "*.http": "capacitor",
+    "vitest.config.e2e.ts": "vitest",
+    ".env.local": "gear",
+    ".env.test.local": "gear",
+    ".env.development.local": "gear",
+    ".env.production.local": "gear",
+    "*.module.css": "brackets-sky",
+  },
+  "symbols.folders.associations": {
+    "controllers": "folder-sky-code",
+    "controller": "folder-sky-code",
+    "@types": "folder-blue-code",
+  },
+
+  // ============================================
+  // 📖 SPELL CHECKER
+  // ============================================
+  "cSpell.language": "en,pt-BR",
+  "cSpell.ignorePaths": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    "package-lock.json",
+    "yarn.lock",
+    "pnpm-lock.yaml",
+    ".git",
+  ],
+  "cSpell.userWords": [
+    "bitnami",
+    "codando",
+    "datasource",
+    "dotenv",
+    "nestjs",
+    "postgres",
+    "postgresql",
+    "uuid",
+    "vscode",
+  ],
+
+  // ============================================
+  // 🔒 PRIVACIDADE E SEGURANÇA
+  // ============================================
+  "redhat.telemetry.enabled": false,
+  "extensions.ignoreRecommendations": true,
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false,
+  "update.mode": "manual",
+  "update.showReleaseNotes": false,
+  "telemetry.telemetryLevel": "off",
+  "security.workspace.trust.untrustedFiles": "newWindow",
+}
+```
+
+</details>
+
+### 🎯 Configuração Básica (Mínima)
+
+Se preferir começar com o essencial:
 
 ```json
 {
@@ -129,7 +340,7 @@ Para aproveitar ao máximo o tema Jooneboy:
   "editor.fontFamily": "'Fira Code', 'JetBrains Mono', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
-  "editor.lineHeight": 22,
+  "editor.lineHeight": 1.6,
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.bracketPairColorization.enabled": true,
@@ -141,27 +352,66 @@ Para aproveitar ao máximo o tema Jooneboy:
 }
 ```
 
+## 📦 Extensões Recomendadas
+
+### 🎨 Temas de Ícones
+
+- **Symbols** - Icon theme otimizado usado na configuração
+- **Fluent Icons** - Product icons modernos da Microsoft
+
+### 🛠️ Desenvolvimento
+
+- **GitLens** - Controle de versão visual aprimorado
+- **Error Lens** - Exibição inline de erros e warnings
+- **Todo Tree** - Gerenciamento visual de TODOs
+- **Bracket Pair Colorizer** - Destacar brackets correspondentes
+- **Indent Rainbow** - Guias de indentação coloridas
+
+### 💻 Terminal
+
+- **JetBrainsMono Nerd Font** - Fonte com ícones para terminal
+  - Download: https://www.nerdfonts.com/
 
 ## 💡 Dicas de Uso
 
-### Fontes Recomendadas
-- **Fira Code** - Excelentes ligaduras
-- **JetBrains Mono** - Ótima legibilidade
-- **Cascadia Code** - Moderna e limpa
-- **Victor Mono** - Itálicos cursivos elegantes
+### Fontes Recomendadas para o Editor
 
-### Extensões que Combinam Perfeitamente
-- GitLens (controle de versão visual)
-- Error Lens (erros inline)
-- Todo Tree (gerenciamento de TODOs)
-- Bracket Pair Colorizer (destacar brackets)
-- Indent Rainbow (guias de indentação)
+1. **Fira Code** - Excelentes ligaduras, muito popular
+2. **JetBrains Mono** - Ótima legibilidade, moderna
+3. **Cascadia Code** - Fonte da Microsoft, limpa
+4. **Victor Mono** - Itálicos cursivos elegantes
+5. **Monaspace** - Família de fontes da GitHub
+
+### Atalhos Úteis para Interface Minimalista
+
+Com a configuração minimalista, você pode usar:
+
+- `Ctrl+Shift+P` / `Cmd+Shift+P` - Command Palette
+- `Ctrl+B` / `Cmd+B` - Toggle Sidebar
+- `Ctrl+J` / `Cmd+J` - Toggle Panel
+- `Ctrl+K Ctrl+S` - Keyboard Shortcuts
+
+### Como Personalizar Ainda Mais
+
+1. **Ajustar tamanho da fonte**: Modifique `editor.fontSize` e `editor.lineHeight`
+2. **Mudar família da fonte**: Altere `editor.fontFamily`
+3. **Habilitar status bar**: Remova `"workbench.statusBar.visible": false`
+4. **Mostrar minimap**: Remova `"editor.minimap.enabled": false`
+
+## 🚀 Instalação
+
+1. Abra o VS Code
+2. Vá em Extensions (`Ctrl+Shift+X` / `Cmd+Shift+X`)
+3. Pesquise por "Jooneboy"
+4. Clique em "Install"
+5. Selecione o tema em: `File > Preferences > Color Theme`
 
 ## 🤝 Contribuições
 
 Sugestões e melhorias são bem-vindas! Abra uma issue ou pull request no repositório.
 
 ### Como Contribuir
+
 1. Fork o projeto
 2. Crie sua feature branch (`git checkout -b feature/MinhaFeature`)
 3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
@@ -170,8 +420,7 @@ Sugestões e melhorias são bem-vindas! Abra uma issue ou pull request no reposi
 
 ---
 
-
-## Suporte
+## 📞 Suporte
 
 Reporte issues em:
 [https://github.com/joaomjbraga/jooneboy-theme/issues](https://github.com/joaomjbraga/jooneboy-theme/issues)
