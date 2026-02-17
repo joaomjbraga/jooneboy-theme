@@ -1,434 +1,110 @@
-![Jooneboy](screenshots/capa.png)
+# Jooneboy Forest Dark
 
-Tema com alto contraste, criado com uma paleta de cores baseada em tons terrosos. Agora com suporte completo aos recursos recentes do VS Code e integração com extensões populares.
+![Jooneboy Dark](screenshots/banner.png)
 
-## 🖼️ Preview
+Tema dark para VS Code com fundo preto frio e paleta terrosa dessaturada. Desenvolvido especificamente para o ecossistema JavaScript e TypeScript — com atenção à distinção semântica entre tipos, funções, variáveis e keywords.
 
-![Preview](screenshots/preview.png)
+## Preview
 
-## 🎨 Paleta de Cores
+![component.tsx](screenshots/preview-tsx.png)
 
-### Cores Principais
+![api.ts](screenshots/preview-api.png)
 
-- **Dourado Principal**: `#C9A858` - Badges, ênfase, bordas ativas, destaque
-- **Dourado Secundário**: `#AD924B` - Funções, métodos, elementos interativos
-- **Verde Floresta**: `#7A8C5E` - Namespaces, módulos
-- **Verde Oliva**: `#8A9B28` - Comentários (mais legível)
-- **Verde Sucesso**: `#64712C` - Adições Git, testes passados, confirmações
-- **Marrom Tipos**: `#B8A074` - Tipos, parâmetros de tipo
-- **Verde Propriedade**: `#8B9D6F` - Propriedades, campos
+![types.ts](screenshots/preview-types.png)
 
-### Cores de Interface
+## Paleta
 
-- **Background Editor**: `#0f1014` (preto moderno otimizado)
-- **Background UI**: `#0F1011` (sidebar, panel)
-- **Background Escuro**: `#0A0B0C` (status bar, abas inativas)
-- **Foreground**: `#E8E6E3` (branco quente)
-- **Números de Linha**: `#8A8470` (melhor contraste - antes `#7A745C`)
-- **Números Ativos**: `#C9A858` (destaque dourado)
+| Papel                 | Cor       | Token          |
+| --------------------- | --------- | -------------- |
+| Background editor     | `#0C0C0D` | `stone_void`   |
+| Foreground principal  | `#B8B0A8` | `clay`         |
+| Foreground máximo     | `#E2DDD8` | `chalk`        |
+| Comentários           | `#3A3840` | `ash_dim`      |
+| Strings               | `#6B7E68` | `moss`         |
+| Template literals     | `#8A9E86` | `moss_light`   |
+| Funções (call)        | `#A07858` | `siena`        |
+| Funções (decl)        | `#C0946A` | `siena_light`  |
+| Variáveis             | `#9A8C60` | `ochre`        |
+| Constantes            | `#B8A87A` | `ochre_light`  |
+| Keywords              | `#8A5E5A` | `terra`        |
+| Control flow          | `#A87068` | `terra_bright` |
+| Types TS              | `#6A6878` | `slate`        |
+| Interfaces / generics | `#8A8898` | `slate_light`  |
+| Números / enums       | `#A89460` | `amber`        |
 
-### Cores Semânticas
+## Destaques do tema
 
-- **Keywords**: `#C678DD` (roxo suave)
-- **Strings**: `#98C379` (verde claro)
-- **Numbers**: `#D19A66` (laranja suave)
-- **Comments**: `#8A9B28` (verde oliva - itálico, melhor contraste)
-- **Doc Comments**: `#9CAF4A` (verde mais claro para documentação)
-- **Errors**: `#E06C75` (vermelho)
-- **Warnings**: `#E5C07B` (amarelo)
-- **Info**: `#61AFEF` (azul)
+**Sistema de tipos TypeScript isolado** — types, interfaces, generics e type operators usam a família `slate` (violáceo frio), completamente separada das outras categorias. `<Button>` em JSX e `type Foo = ...` são visualmente distintos sem ambiguidade.
 
-### Melhorias de Contraste
+**Distinção decl vs call** — funções declaradas (`#C0946A`) são mais claras que chamadas (`#A07858`). O olho identifica pontos de definição sem esforço.
 
-🎯 **Números de Linha**: `#7A745C` → `#8A8470` (22% mais contraste)
-🎯 **Abas Inativas**: Distinção clara entre ativas e inativas
-🎯 **Texto Inativo**: `#808080` → `#909090` (melhor legibilidade)
-🎯 **Badges**: `#AD924B` → `#C9A858` (maior destaque)
-🎯 **Terminal Bright Black**: `#48453D` → `#5A564D` (muito mais legível)
+**Itálico contido** — aplicado apenas onde tem significado semântico: comentários, parâmetros, `async/await`, tipos e modificadores. Nenhum itálico decorativo.
 
-### Tokens Semânticos Expandidos
+**Line numbers legíveis** — `#5C5862` nos inativos, `#8A8590` no ativo. Contraste real em qualquer monitor.
 
-```typescript
-// Novos tokens semânticos
+**Imports sem destaque** — bindings de import ficam em `clay` neutro. A atenção visual fica no código, não nos cabeçalhos de arquivo.
+
+## Instalação
+
+1. Abra o VS Code
+2. Vá em Extensions (`Ctrl+Shift+X`)
+3. Pesquise por **Jooneboy**
+4. Clique em Install
+5. `File > Preferences > Color Theme > Jooneboy Forest Dark`
+
+## Configuração recomendada
+
+Para melhor experiência com o tema, adicione ao seu `settings.json`:
+
+```json
 {
-  "enumMember": "#E5C07B",        // Membros de enum
-  "typeParameter": "#B8A074",      // Parâmetros genéricos
-  "decorator": "#E5C07B",          // Decorators (@)
-  "macro": "#56B6C2",              // Macros
-  "label": "#C9A858",              // Labels
-  "comment.documentation": "#9CAF4A" // Comentários de doc
-}
-```
-
-### Suporte Específico por Linguagem
-
-#### 🐍 Python
-
-- F-strings com destaque especial
-- Type hints diferenciados
-- Decorators em itálico dourado
-- Parâmetro `self` destacado
-
-#### ⚛️ TypeScript/JavaScript
-
-- Decorators suportados
-- Utility types (`Partial`, `Pick`, etc.)
-- Template literals
-- JSX: Props vs atributos diferenciados
-
-#### 🦀 Rust
-
-- Traits em itálico
-- Lifetimes destacados
-- Macros com cor específica
-- Mutable references em vermelho
-
-#### 🔷 Go
-
-- Goroutines e channels destacados
-- Error type específico
-- Struct fields diferenciados
-- Métodos vs funções
-
-#### ☕ Java
-
-- Annotations douradas
-- Generics com tipo específico
-- Static members destacados
-- Primitive types diferenciados
-
-### Integração com Extensões
-
-#### GitLens
-
-```json
-"gitlens.gutterBackgroundColor": "#0f101400",
-"gitlens.gutterForegroundColor": "#8A8470",
-"gitlens.gutterUncommittedForegroundColor": "#AD924B",
-"gitlens.trailingLineForegroundColor": "#8A8470"
-```
-
-#### Error Lens
-
-```json
-"errorLens.errorBackground": "#E06C7520",
-"errorLens.warningBackground": "#E5C07B20",
-"errorLens.infoBackground": "#61AFEF20",
-"errorLens.hintBackground": "#64712C20"
-```
-
-#### Todo Tree
-
-```json
-"todo-tree.highlights.TODOHighlight.foreground": "#E5C07B",
-"todo-tree.highlights.FIXMEHighlight.foreground": "#E06C75",
-"todo-tree.highlights.NOTEHighlight.foreground": "#61AFEF",
-"todo-tree.highlights.HACKHighlight.foreground": "#C678DD"
-```
-
-## ⚙️ Configuração Completa Recomendada
-
-Para aproveitar ao máximo o tema Jooneboy com uma experiência minimalista e otimizada, adicione estas configurações ao seu `settings.json`:
-
-<details>
-<summary>📋 Clique para ver a configuração completa</summary>
-
-```jsonc
-{
-  // ============================================
-  // 🎨 TEMA E APARÊNCIA
-  // ============================================
-  "workbench.colorTheme": "Jooneboy",
+  "workbench.colorTheme": "Jooneboy Dark",
   "workbench.iconTheme": "symbols",
   "workbench.productIconTheme": "fluent-icons",
 
-  // ============================================
-  // 🪟 INTERFACE MINIMALISTA
-  // ============================================
-  "window.menuBarVisibility": "hidden",
-  "window.commandCenter": false,
-  "chat.commandCenter.enabled": false,
-
-  "workbench.editor.editorActionsLocation": "titleBar",
-  "workbench.activityBar.location": "top",
-  "workbench.statusBar.visible": false,
-  "workbench.editor.labelFormat": "short",
-  "workbench.startupEditor": "none",
-  "workbench.settings.enableNaturalLanguageSearch": false,
-  "workbench.tips.enabled": false,
-  "workbench.enableExperiments": false,
-
-  // ============================================
-  // 📝 EDITOR - VISUAL
-  // ============================================
-  "breadcrumbs.enabled": false,
-  "editor.minimap.enabled": false,
-  "editor.hideCursorInOverviewRuler": true,
-  "editor.stickyScroll.enabled": false,
-
-  // Fonte e tipografia
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
-  "editor.fontSize": 14,
-  "editor.lineHeight": 1.6,
-
-  // Comportamento do cursor
-  "editor.cursorBlinking": "smooth",
-  "editor.cursorSmoothCaretAnimation": "on",
-
-  // Brackets e guias
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
-
-  // Sugestões e hints
-  "editor.inlayHints.enabled": "on",
-
-  // Scroll suave
+  "editor.fontSize": 13,
+  "editor.fontWeight": "300",
+  "editor.lineHeight": 1.8,
+  "editor.letterSpacing": 0.3,
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 1,
+  "editor.cursorBlinking": "phase",
+  "editor.renderLineHighlight": "gutter",
+  "editor.guides.indentation": true,
+  "editor.guides.bracketPairs": false,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
   "editor.smoothScrolling": true,
-  "workbench.list.smoothScrolling": true,
 
-  // ============================================
-  // 📝 EDITOR - COMPORTAMENTO
-  // ============================================
-  "editor.tabSize": 2,
-  "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 100,
+  "breadcrumbs.enabled": false,
+  "window.titleBarStyle": "custom",
 
-  // Gerenciamento de abas
-  "workbench.editor.closeOnFileDelete": true,
-  "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 10,
-  "workbench.editor.limit.perEditorGroup": true,
-  "workbench.editor.enablePreview": false,
-
-  // ============================================
-  // 💾 ARQUIVOS
-  // ============================================
-  "files.hotExit": "onExitAndWindowClose",
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
-
-  // Associações de arquivos
-  "files.associations": {
-    "*.css": "css",
-    ".env*": "dotenv",
-  },
-
-  // ============================================
-  // 📁 EXPLORER
-  // ============================================
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "explorer.compactFolders": false,
-
-  // ============================================
-  // 🖥️ TERMINAL
-  // ============================================
-  "terminal.integrated.showExitAlert": false,
-  "terminal.integrated.rightClickBehavior": "nothing",
-  "terminal.integrated.copyOnSelection": false,
-  "terminal.integrated.cursorBlinking": false,
-  "terminal.integrated.cursorStyle": "block",
-  "terminal.integrated.stickyScroll.enabled": false,
-  "terminal.integrated.scrollback": 10000,
-  "terminal.integrated.enablePersistentSessions": false,
-  "terminal.integrated.persistentSessionReviveProcess": "never",
-  "terminal.integrated.smoothScrolling": true,
-
-  // Fonte do terminal
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontLigatures.enabled": true,
-
-  // ============================================
-  // ✨ FORMATAÇÃO E LINTING
-  // ============================================
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "explicit",
-  },
-
-  // Formatadores padrão por linguagem
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma",
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features",
-  },
-  "[css]": {
-    "editor.defaultFormatter": "vscode.css-language-features",
-  },
-
-  // ============================================
-  // 🎯 SYMBOLS (Icon Theme)
-  // ============================================
-  "symbols.files.associations": {
-    "*.module.ts": "nest",
-    "*.service.ts": "nest-service",
-    "*.pipe.ts": "nest-middleware",
-    "*.guard.ts": "nest-guard",
-    "*.decorator.ts": "nest-decorator",
-    "*.mock.ts": "ts-test",
-    "*.e2e-spec.ts": "ts-test",
-    "*.e2e-test.ts": "ts-test",
-    "*.http": "capacitor",
-    "vitest.config.e2e.ts": "vitest",
-    ".env.local": "gear",
-    ".env.test.local": "gear",
-    ".env.development.local": "gear",
-    ".env.production.local": "gear",
-    "*.module.css": "brackets-sky",
-  },
-  "symbols.folders.associations": {
-    "controllers": "folder-sky-code",
-    "controller": "folder-sky-code",
-    "@types": "folder-blue-code",
-  },
-
-  // ============================================
-  // 📖 SPELL CHECKER
-  // ============================================
-  "cSpell.language": "en,pt-BR",
-  "cSpell.ignorePaths": [
-    "node_modules",
-    "dist",
-    "build",
-    "coverage",
-    "package-lock.json",
-    "yarn.lock",
-    "pnpm-lock.yaml",
-    ".git",
-  ],
-  "cSpell.userWords": [
-    "bitnami",
-    "codando",
-    "datasource",
-    "dotenv",
-    "nestjs",
-    "postgres",
-    "postgresql",
-    "uuid",
-    "vscode",
-  ],
-
-  // ============================================
-  // 🔒 PRIVACIDADE E SEGURANÇA
-  // ============================================
-  "redhat.telemetry.enabled": false,
-  "extensions.ignoreRecommendations": true,
-  "extensions.autoCheckUpdates": false,
-  "extensions.autoUpdate": false,
-  "update.mode": "manual",
-  "update.showReleaseNotes": false,
-  "telemetry.telemetryLevel": "off",
-  "security.workspace.trust.untrustedFiles": "newWindow",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.lineHeight": 1.6
 }
 ```
 
-</details>
+## Fonte
 
-### 🎯 Configuração Básica (Mínima)
+O tema foi desenvolvido com **JetBrains Mono** weight 300. O traço fino valoriza a paleta dessaturada sem competir com as cores. Alternativas compatíveis: Geist Mono, Commit Mono, Input Mono.
 
-Se preferir começar com o essencial:
+Para o terminal, qualquer variante **Nerd Font** da fonte escolhida.
 
-```json
-{
-  "workbench.colorTheme": "Jooneboy",
-  "editor.fontFamily": "'Fira Code', 'JetBrains Mono', monospace",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 14,
-  "editor.lineHeight": 1.6,
-  "editor.cursorBlinking": "smooth",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
-  "editor.inlayHints.enabled": "on",
-  "editor.smoothScrolling": true,
-  "workbench.list.smoothScrolling": true,
-  "terminal.integrated.smoothScrolling": true
-}
-```
+## Contribuições
 
-## 📦 Extensões Recomendadas
-
-### 🎨 Temas de Ícones
-
-- **Symbols** - Icon theme otimizado usado na configuração
-- **Fluent Icons** - Product icons modernos da Microsoft
-
-### 🛠️ Desenvolvimento
-
-- **GitLens** - Controle de versão visual aprimorado
-- **Error Lens** - Exibição inline de erros e warnings
-- **Todo Tree** - Gerenciamento visual de TODOs
-- **Bracket Pair Colorizer** - Destacar brackets correspondentes
-- **Indent Rainbow** - Guias de indentação coloridas
-
-### 💻 Terminal
-
-- **JetBrainsMono Nerd Font** - Fonte com ícones para terminal
-  - Download: https://www.nerdfonts.com/
-
-## 💡 Dicas de Uso
-
-### Fontes Recomendadas para o Editor
-
-1. **Fira Code** - Excelentes ligaduras, muito popular
-2. **JetBrains Mono** - Ótima legibilidade, moderna
-3. **Cascadia Code** - Fonte da Microsoft, limpa
-4. **Victor Mono** - Itálicos cursivos elegantes
-5. **Monaspace** - Família de fontes da GitHub
-
-### Atalhos Úteis para Interface Minimalista
-
-Com a configuração minimalista, você pode usar:
-
-- `Ctrl+Shift+P` / `Cmd+Shift+P` - Command Palette
-- `Ctrl+B` / `Cmd+B` - Toggle Sidebar
-- `Ctrl+J` / `Cmd+J` - Toggle Panel
-- `Ctrl+K Ctrl+S` - Keyboard Shortcuts
-
-### Como Personalizar Ainda Mais
-
-1. **Ajustar tamanho da fonte**: Modifique `editor.fontSize` e `editor.lineHeight`
-2. **Mudar família da fonte**: Altere `editor.fontFamily`
-3. **Habilitar status bar**: Remova `"workbench.statusBar.visible": false`
-4. **Mostrar minimap**: Remova `"editor.minimap.enabled": false`
-
-## 🚀 Instalação
-
-1. Abra o VS Code
-2. Vá em Extensions (`Ctrl+Shift+X` / `Cmd+Shift+X`)
-3. Pesquise por "Jooneboy"
-4. Clique em "Install"
-5. Selecione o tema em: `File > Preferences > Color Theme`
-
-## 🤝 Contribuições
-
-Sugestões e melhorias são bem-vindas! Abra uma issue ou pull request no repositório.
-
-### Como Contribuir
+Issues e pull requests são bem-vindos.
 
 1. Fork o projeto
-2. Crie sua feature branch (`git checkout -b feature/MinhaFeature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
-4. Push para a branch (`git push origin feature/MinhaFeature`)
+2. Crie sua branch (`git checkout -b fix/minha-correcao`)
+3. Commit (`git commit -m 'Descrição da mudança'`)
+4. Push (`git push origin fix/minha-correcao`)
 5. Abra um Pull Request
+
+Reporte problemas em [github.com/joaomjbraga/jooneboy-theme/issues](https://github.com/joaomjbraga/jooneboy-theme/issues)
 
 ---
 
-## 📞 Suporte
-
-Reporte issues em:
-[https://github.com/joaomjbraga/jooneboy-theme/issues](https://github.com/joaomjbraga/jooneboy-theme/issues)
-
-| [![João M J Braga](https://github.com/joaomjbraga.png?size=100)](https://github.com/joaomjbraga)
-
-Se você gostou deste tema, considere deixar uma ⭐ no repositório!
-
-## 📄 Licença
-
-Este tema é de uso livre. Criado por João Braga.
+Criado por [João Marcos de Jesus Braga](https://github.com/joaomjbraga) — MIT License
