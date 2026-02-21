@@ -1,48 +1,48 @@
-# Jooneboy Forest Dark
+# Jooneboy Dark
 
 ![Jooneboy Dark](screenshots/banner.png)
 
-Tema dark para VS Code com fundo preto frio e paleta terrosa dessaturada. Desenvolvido especificamente para o ecossistema JavaScript e TypeScript — com atenção à distinção semântica entre tipos, funções, variáveis e keywords.
+![Preview](./screenshots/preview.png)
 
-## Preview
-
-![component.tsx](screenshots/preview-tsx.png)
-
-![api.ts](screenshots/preview-api.png)
-
-![types.ts](screenshots/preview-types.png)
+Tema dark para VS Code com paleta orgânica mineral. Desenvolvido para o ecossistema JavaScript e TypeScript — com cobertura completa para SQL, Docker, Shell, CSS e Markdown.
 
 ## Paleta
 
-| Papel                 | Cor       | Token          |
-| --------------------- | --------- | -------------- |
-| Background editor     | `#0C0C0D` | `stone_void`   |
-| Foreground principal  | `#B8B0A8` | `clay`         |
-| Foreground máximo     | `#E2DDD8` | `chalk`        |
-| Comentários           | `#3A3840` | `ash_dim`      |
-| Strings               | `#6B7E68` | `moss`         |
-| Template literals     | `#8A9E86` | `moss_light`   |
-| Funções (call)        | `#A07858` | `siena`        |
-| Funções (decl)        | `#C0946A` | `siena_light`  |
-| Variáveis             | `#9A8C60` | `ochre`        |
-| Constantes            | `#B8A87A` | `ochre_light`  |
-| Keywords              | `#8A5E5A` | `terra`        |
-| Control flow          | `#A87068` | `terra_bright` |
-| Types TS              | `#6A6878` | `slate`        |
-| Interfaces / generics | `#8A8898` | `slate_light`  |
-| Números / enums       | `#A89460` | `amber`        |
+| Papel                 | Cor       | Nome          |
+| --------------------- | --------- | ------------- |
+| Background editor     | `#201F27` | `bg_mid`      |
+| Foreground principal  | `#C9C3BC` | `fg_base`     |
+| Foreground máximo     | `#EDE7E0` | `fg_bright`   |
+| Comentários           | `#4A4658` | `fg_ghost`    |
+| Strings               | `#72A188` | `moss`        |
+| Template literals     | `#93BDA6` | `moss_light`  |
+| Funções (call)        | `#BC836B` | `siena`       |
+| Funções (decl)        | `#D09B80` | `siena_light` |
+| Variáveis             | `#B4A568` | `ochre`       |
+| Constantes            | `#CCBB83` | `ochre_light` |
+| Keywords              | `#AE7C80` | `terra`       |
+| Control flow          | `#C5726C` | `terra_ctrl`  |
+| Types TS              | `#8389B4` | `slate`       |
+| Interfaces / generics | `#969CC4` | `slate_light` |
+| Números / enums       | `#BCA16B` | `amber`       |
 
-## Destaques do tema
+### Filosofia de cor
 
-**Sistema de tipos TypeScript isolado** — types, interfaces, generics e type operators usam a família `slate` (violáceo frio), completamente separada das outras categorias. `<Button>` em JSX e `type Foo = ...` são visualmente distintos sem ambiguidade.
+Backgrounds em **H:248°** (azul-violeta basáltico sutil) criam profundidade fria. Foregrounds em tom areia quente (**H:35°**) produzem contraste térmico que reduz fadiga em sessões longas. Accents com hues orgânicos — musgo frio (H:148°), terracota (H:18°), ardósia azul (H:232°) — dão ao tema identidade visual própria.
 
-**Distinção decl vs call** — funções declaradas (`#C0946A`) são mais claras que chamadas (`#A07858`). O olho identifica pontos de definição sem esforço.
+Todos os tokens de texto passam **WCAG AA** (≥4.5:1). O texto principal atinge **9.3:1 AAA**.
 
-**Itálico contido** — aplicado apenas onde tem significado semântico: comentários, parâmetros, `async/await`, tipos e modificadores. Nenhum itálico decorativo.
+## Destaques
 
-**Line numbers legíveis** — `#5C5862` nos inativos, `#8A8590` no ativo. Contraste real em qualquer monitor.
+**Sistema de tipos TypeScript isolado** — types, interfaces, generics e type operators usam a família `slate` (azul-ardósia), completamente separada das outras categorias.
 
-**Imports sem destaque** — bindings de import ficam em `clay` neutro. A atenção visual fica no código, não nos cabeçalhos de arquivo.
+**Distinção decl vs call** — funções declaradas são mais claras que chamadas. O olho localiza pontos de definição sem esforço.
+
+**Itálico com significado** — aplicado apenas onde tem semântica: comentários, parâmetros, `async/await`, tipos e modificadores.
+
+**Imports sem destaque** — bindings de import ficam em `fg_base` neutro. A atenção visual fica no código, não nos cabeçalhos de arquivo.
+
+**Cobertura profissional completa** — SQL, Dockerfile, Shell/Bash, Markdown, CSS/SCSS, YAML/TOML, JSON e RegExp com regras granulares.
 
 ## Instalação
 
@@ -50,11 +50,9 @@ Tema dark para VS Code com fundo preto frio e paleta terrosa dessaturada. Desenv
 2. Vá em Extensions (`Ctrl+Shift+X`)
 3. Pesquise por **Jooneboy**
 4. Clique em Install
-5. `File > Preferences > Color Theme > Jooneboy Forest Dark`
+5. `File > Preferences > Color Theme > Jooneboy Dark`
 
 ## Configuração recomendada
-
-Para melhor experiência com o tema, adicione ao seu `settings.json`:
 
 ```json
 {
@@ -89,9 +87,7 @@ Para melhor experiência com o tema, adicione ao seu `settings.json`:
 
 ## Fonte
 
-O tema foi desenvolvido com **JetBrains Mono** weight 300. O traço fino valoriza a paleta dessaturada sem competir com as cores. Alternativas compatíveis: Geist Mono, Commit Mono, Input Mono.
-
-Para o terminal, qualquer variante **Nerd Font** da fonte escolhida.
+Desenvolvido com **JetBrains Mono** weight 300. O traço fino complementa a paleta dessaturada. Alternativas compatíveis: Geist Mono, Commit Mono, Input Mono.
 
 ## Contribuições
 
