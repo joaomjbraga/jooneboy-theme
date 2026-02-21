@@ -1,6 +1,6 @@
 # Jooneboy Dark
 
-![Jooneboy Dark](screenshots/banner.png)
+![Jooneboy](screenshots/banner.png)
 
 ![Preview](./screenshots/preview.png)
 

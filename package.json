@@ -46,9 +46,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "Jooneboy Dark",
+        "label": "Jooneboy",
         "uiTheme": "vs-dark",
         "path": "./themes/jooneboy-theme.json"
+      },
+      {
+        "label": "Jooneboy Rosé",
+        "uiTheme": "vs-dark",
+        "path": "./themes/jooneboy-rose.json"
       }
     ]
   }
